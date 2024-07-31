@@ -6,7 +6,7 @@ export default {
 		extend: {
 			fontFamily: {
 				Inter: ["Inter", "sans"],
-				Poppins: ["Poppins", "sans-serif"],
+				Poppins: ["Kanit", "sans-serif"],
 			},
 			colors: {
 				BG: "#0B132B",
