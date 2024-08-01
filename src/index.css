@@ -8,11 +8,6 @@
 	}
 }
 
-.progress::-webkit-progress-value {
-	background: linear-gradient(87deg, #e92b2b, #f97a1f, #eef226, #37ff33);
-	background-size: auto;
-}
-
 .spinner {
 	width: 56px;
 	height: 56px;

@@ -1,15 +1,15 @@
 /* eslint-disable react/prop-types */
 export function DetailsPercentRow({ name = "Default", per = "0" }) {
 	return (
-		<div className="flex flex-row w-full items-center justify-between gap-3 text-xl flex-1 text-nowrap flex-nowrap">
-			<span className="text-WHITE font-normal text-nowrap text-base sm:text-xl">
+		<div className="flex flex-row w-full items-center justify-between gap-3 flex-1 text-nowrap flex-nowrap text-sm sm:text-base md:text-xl">
+			<span className="text-WHITE font-normal text-nowrap  flex-1">
 				{name} :
 			</span>
 			<progress
-				className="progress h-2 sm:h-3 progress-secondary w-5/6"
+				className="progress h-2 sm:h-3 progress-primary flex-2"
 				value={per}
 				max="100"></progress>
-			<span className="text-WHITE font-normal text-nowrap">{per} %</span>
+			<span className="text-WHITE font-normal text-nowrap flex-1">{per} %</span>
 		</div>
 	);
 }
