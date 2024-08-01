@@ -6,6 +6,7 @@ import SectionTwo from "./components/Section 2/section-two";
 
 function App() {
 	const [isLoading, setIsLoading] = useState(true);
+	const colors = { color1: "#1768AC", color2: "#C5E063" };
 
 	useEffect(() => {
 		function load() {
@@ -22,7 +23,7 @@ function App() {
 				<Loader />
 			) : (
 				<>
-					<SectionOne />
+					<SectionOne colors={colors} />
 					<SectionTwo />
 				</>
 			)}
