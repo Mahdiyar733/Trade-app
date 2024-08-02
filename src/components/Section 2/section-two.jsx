@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import CardRank from "../Card";
 import { ChartCurr } from "../Chart";
+import { ChartWave } from "../ChartWave";
 import { DetailsPercent } from "./DetailsPercent/DetailsPercent";
 import ScoreBadge from "./ScoreBadge/ScoreBadge";
 
@@ -18,8 +19,9 @@ function SectionTwo({ colors }) {
 					<ChartCurr colors={colors} />
 					<CardRank />
 				</div>
-				<div className="flex flex-col items-center flex-1">
-					<div className="w-full py-2 bg-blue-200">s</div>
+				<div className="flex flex-col items-center flex-1 h-full gap-4">
+					<ChartWave colors={colors} />
+					<div className="w-full h-8 bg-slate-500">s</div>
 				</div>
 			</div>
 		</>

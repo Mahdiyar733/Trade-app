@@ -179,29 +179,31 @@ const ChartTooltipContent = React.forwardRef(
 										) : (
 											!hideIndicator && (
 												<div
-													className={cn("shrink-0 rounded-[2px] bg-primary", {
-														"h-2.5 w-2.5": indicator === "dot",
-														"w-1": indicator === "line",
-														"w-0 border-[1.5px] border-dashed bg-transparent":
-															indicator === "dashed",
-														"my-0.5": nestLabel && indicator === "dashed",
-													})}
-													// style={{
-													// 	backgroundColor: "red",
-													// 	"--color-bg": indicatorColor,
-													// 	"--color-border": indicatorColor,
-													// }}
+													className={cn(
+														"shrink-0 rounded-[2px] border-[--color-border] bg-[--color-bg]",
+														{
+															"h-2.5 w-2.5": indicator === "dot",
+															"w-1": indicator === "line",
+															"w-0 border-[1.5px] border-dashed bg-transparent":
+																indicator === "dashed",
+															"my-0.5": nestLabel && indicator === "dashed",
+														},
+													)}
+													style={{
+														"--color-bg": indicatorColor,
+														"--color-border": indicatorColor,
+													}}
 												/>
 											)
 										)}
 										<div
 											className={cn(
-												"flex flex-1 justify-between leading-none  ",
+												"flex flex-1 justify-between leading-none",
 												nestLabel ? "items-end" : "items-center",
 											)}>
 											<div className="grid gap-1.5">
 												{nestLabel ? tooltipLabel : null}
-												<span className="text-muted-foreground ">
+												<span className="text-muted-foreground">
 													{itemConfig?.label || item.name}
 												</span>
 											</div>
