@@ -38,7 +38,7 @@ const chartConfig = {
 export function ChartCurr({ colors }) {
 	const { color1, color2 } = colors;
 	return (
-		<Card className="md:w-full w-full sm:w-5/6 bg-primary-content ">
+		<Card className="md:w-full w-full sm:w-5/6 bg-prim2">
 			<CardHeader className="items-center pb-4 text-BG">
 				<CardTitle className="font-bold font-Inter">Radar Chart</CardTitle>
 				<CardDescription className="text-BG opacity-75">

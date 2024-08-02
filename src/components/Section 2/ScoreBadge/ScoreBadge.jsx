@@ -1,6 +1,6 @@
 function ScoreBadge() {
 	return (
-		<div className="stats stats-horizontal sm:stats-vertical shadow w-full sm:w-[unset]">
+		<div className="stats stats-horizontal sm:stats-vertical shadow w-full sm:w-[unset] lg:stats-horizontal">
 			<div className="stat">
 				<div className="stat-title text-primary">
 					Digital <storng className="font-bold">Gem</storng>
