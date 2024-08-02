@@ -24,7 +24,7 @@ function App() {
 			) : (
 				<>
 					<SectionOne colors={colors} />
-					<SectionTwo />
+					<SectionTwo colors={colors} />
 				</>
 			)}
 		</>
