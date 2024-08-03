@@ -1,46 +1,42 @@
 /* eslint-disable react/prop-types */
 "use client";
 
-import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
+import { Area, AreaChart, CartesianGrid, XAxis } from "recharts";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import {
 	ChartContainer,
 	ChartTooltip,
 	ChartTooltipContent,
-	ChartLegend,
-	ChartLegendContent,
 } from "@/components/ui/chart";
+
 const chartData = [
-	{ month: "January", desktop: 186, mobile: 80 },
-	{ month: "February", desktop: 305, mobile: 200 },
-	{ month: "March", desktop: 237, mobile: 120 },
-	{ month: "April", desktop: 73, mobile: 190 },
-	{ month: "May", desktop: 209, mobile: 130 },
-	{ month: "June", desktop: 214, mobile: 140 },
+	{ month: "January", rate: 186 },
+	{ month: "February", rate: 305 },
+	{ month: "March", rate: 237 },
+	{ month: "April", rate: 73 },
+	{ month: "May", rate: 209 },
+	{ month: "June", rate: 214 },
 ];
 
 const chartConfig = {
-	desktop: {
-		label: "Desktop",
-		color: "#B475D1",
-	},
-	mobile: {
-		label: "Mobile",
-		color: "green",
+	rate: {
+		label: "Rate",
+		color: "hsl(var(--primary))",
 	},
 };
 
 export function ChartWave({ colors }) {
-	const { color1, color2 } = colors;
+	const { color1 } = colors;
+	chartConfig.rate.color = color1;
 	return (
-		<Card className="md:w-full w-full sm:w-5/6 bg-prim2">
+		<Card className="bg-prim2 w-full sm:w-4/6 md:w-full">
 			<CardHeader>
-				<CardTitle>Line Chart - Multiple</CardTitle>
+				<CardTitle className="font-bold text-BG">Area Chart</CardTitle>
 			</CardHeader>
 			<CardContent>
 				<ChartContainer config={chartConfig}>
-					<LineChart
+					<AreaChart
 						accessibilityLayer
 						data={chartData}
 						margin={{
@@ -59,25 +55,14 @@ export function ChartWave({ colors }) {
 							cursor={false}
 							content={<ChartTooltipContent indicator="line" />}
 						/>
-						<ChartLegend
-							content={<ChartLegendContent config={chartConfig} />}
+						<Area
+							dataKey="rate"
+							type="natural"
+							fill="var(--color-rate)"
+							fillOpacity={0.4}
+							stroke="var(--color-rate)"
 						/>
-
-						<Line
-							dataKey="desktop"
-							type="monotone"
-							style={{ stroke: color1 }}
-							strokeWidth={2}
-							dot={false}
-						/>
-						<Line
-							dataKey="mobile"
-							type="monotone"
-							strokeWidth={2}
-							style={{ stroke: color2 }}
-							dot={false}
-						/>
-					</LineChart>
+					</AreaChart>
 				</ChartContainer>
 			</CardContent>
 		</Card>

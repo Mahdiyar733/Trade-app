@@ -5,7 +5,7 @@ import { ChartRank } from "./ChartRanks";
 function CardRank() {
 	return (
 		<Card
-			className="sm:max-w-sm md:max-w-[517px] bg-prim2 w-full "
+			className="sm:max-w-sm md:max-w-[517px] bg-prim2 w-full aspect-video flex"
 			x-chunk="charts-01-chunk-5">
 			<CardContent className="flex gap-4 p-4 ">
 				<div className="grid items-center gap-2">

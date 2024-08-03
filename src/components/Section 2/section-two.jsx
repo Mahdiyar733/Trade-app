@@ -14,14 +14,27 @@ function SectionTwo({ colors }) {
 				</div>
 				<DetailsPercent />
 			</div>
-			<div className="flex flex-col md:flex-row-reverse bg-BG w-full gap-7 px-6 sm:px-9">
+			<div className="flex flex-col md:flex-row-reverse bg-BG w-full gap-7 px-6 sm:px-9 pb-4 ">
 				<div className="flex flex-col items-center flex-1 gap-4">
 					<ChartCurr colors={colors} />
 					<CardRank />
 				</div>
 				<div className="flex flex-col items-center flex-1 h-full gap-4">
 					<ChartWave colors={colors} />
-					<div className="w-full h-8 bg-slate-500">s</div>
+					<div className="w-full h-10 bg-prim2 rounded-lg">s</div>
+					<div className="aspect-video w-full p-4 rounded-lg bg-prim2 relative">
+						<video
+							width="full"
+							height="full"
+							className="rounded-lg"
+							controls>
+							<source
+								src="https://tech.sabzlearn.ir/uploads/moein_b/php-api-dev/1_introductApiCourse.mp4?h=YALo9y_uq_XEyAFps2DfwQ&t=1722757347"
+								type="video/mp4"
+							/>
+							Your browser does not support.
+						</video>
+					</div>
 				</div>
 			</div>
 		</>
